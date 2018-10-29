@@ -27,7 +27,7 @@ public class LCA {
     }
 
     public static void main(String[] args) {
-        System.out.println(LCA.powerJump(""));
+        System.out.println(LCA.powerJump("10000"));
     }
     public static int powerJump(String game) {
         char[] steps = game.toCharArray();
@@ -35,14 +35,14 @@ public class LCA {
         int minPower = Integer.MIN_VALUE;
         int count = 1;
         char prev = 0;
-        char last = 0;
+        char last = steps[steps.length -1];
 
         for (Character step : steps) {
-            if (step == '1') {
+            if (step == last) {
                 prev = step;
                 if ( count > minPower)
                     minPower = count;
-            } else if (step == '0'){
+            } else {
                 if (step.equals(prev))
                     count++;
                 else
@@ -50,11 +50,7 @@ public class LCA {
                 prev = step;
 
             }
-            last = step;
         }
-
-        if (game.charAt(game.length() -1) == '0')
-            return 2;
 
         return minPower == Integer.MIN_VALUE ? 0 : minPower;
     }
