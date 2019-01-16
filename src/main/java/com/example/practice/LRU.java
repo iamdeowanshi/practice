@@ -1,7 +1,9 @@
 package com.example.practice;
 
+import java.util.Arrays;
 import java.util.Hashtable;
 import java.util.Map;
+import java.util.PriorityQueue;
 
 public class LRU {
 
@@ -17,10 +19,12 @@ public class LRU {
         }
     }
 
+    PriorityQueue<Integer> queue = new PriorityQueue<>();
     private int size;
     Node head;
     Node end;
     Map<Integer, Node> cache = new Hashtable<>();
+
 
     public LRU(int size) {
         this.size = size;

@@ -108,8 +108,8 @@ public class Trie {
             trie.insert(dictionary[i]);
 
         char boggle[][] = {{'G', 'I', 'Z'},
-                {'U', 'E', 'K'},
-                {'Q', 'S', 'E'}
+                        {'U', 'E', 'K'},
+                        {'Q', 'S', 'E'}
         };
 
         System.out.println(Arrays.toString(trie.findWords(boggle).toArray()));

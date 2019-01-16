@@ -79,6 +79,8 @@ public class NumberIslandII {
             for (int k=0; k<m; k++)
             {
 
+                if (a[j][k] == 9)
+
                 if (a[j][k] == 0)
                     continue;
 

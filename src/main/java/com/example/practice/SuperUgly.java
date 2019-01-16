@@ -5,7 +5,7 @@ import java.util.List;
 
 public class SuperUgly {
 
-    public int nthSuperUglyNumber(int n, int[] primes) {
+    public static int nthSuperUglyNumber(int n, int[] primes) {
         List<Integer> result = new ArrayList<>();
         result.add(1);
         int k = primes.length;
@@ -27,5 +27,9 @@ public class SuperUgly {
         }
 
         return result.get(result.size() -1);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(nthSuperUglyNumber(10, new int[]{2,3,5}));
     }
 }

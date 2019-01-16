@@ -1,6 +1,7 @@
 package com.example.practice;
 
 import java.util.*;
+import java.util.LinkedList;
 
 public class Ladder {
 
