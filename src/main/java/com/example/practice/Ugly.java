@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Ugly {
 
-    public int nthUglyNumber(int n) {
+    public static int nthUglyNumber(int n) {
         List<Integer> ugly = new ArrayList<>();
         List<Integer> non_ugly = new ArrayList<>();
         int k = 1;
@@ -21,13 +21,20 @@ public class Ugly {
                 else if (ugly.contains(i) || i==1) {
                     ugly.add(k);
                     break;
-                } else {
-                    non_ugly.add(k);
                 }
+                else {
+                    non_ugly.add(k);
+                    break;
+                }
+
             }
             k++;
         }
 
         return ugly.get(ugly.size() -1);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(Ugly.nthUglyNumber(12));
     }
 }
